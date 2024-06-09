@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "3D Object Aided Self-Supervised Monocular Depth Estimation"
+date:   2022-06-01 22:21:59 +00:00
+image: /images/3doa-depth.png
+categories: research
+author: "Songlin Wei"
+authors: "<strong>Songlin Wei</strong>, Guodong Chen, Wenzheng Chi, Zhenhua Wang and Lining Sun"
+venue: "IROS"
+arxiv: https://arxiv.org/abs/2212.01768
+video: https://youtu.be/jwOJXkqv7L8
+---
+Self-supervised depth estimation methods rely on static world assumption, which produce inaccurate depths of dynamic objects.
+In this work, we propose to address dynamic object movements through monocular 3D object detection.

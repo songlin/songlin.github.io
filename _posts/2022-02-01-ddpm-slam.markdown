@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Object Clustering with Dirichlet Process Mixture Model for Data Association in Monocular SLAM"
+date:   2022-02-01 22:21:59 +00:00
+image: /images/ddpm-slam.png
+categories: research
+author: "Songlin Wei"
+authors: "<strong>Songlin Wei</strong>, Guodong Chen, Wenzheng Chi, Zhenhua Wang and Lining Sun"
+venue: "IEEE Transactions on Industrial Electronics"
+arxiv: https://doi.org/10.1109/TIE.2022.3146553
+video: https://youtu.be/tpbAwQYhHTk
+---
+We propose a novel data association method for cuboid landmarks based on Dirichlet Process Mixture Model. By jointly considering object class, position, and size, our method can perform data association robustly.

@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Open6DOR: Benchmarking Open-instruction 6-DoF Object Rearrangement and A VLM-based Approach"
+date:   2024-05-01 22:21:59 +00:00
+image: /images/open6dor.jpg
+categories: research
+author: "Songlin Wei"
+authors: "Yufei Ding*, Haoran Geng*, Chaoyi Xu, Xiaomeng Fang, Jiazhao Zhang, <strong>Songlin Wei</strong>, Qiyu Dai, Zhizheng Zhang, He Wang†"
+venue: "CVPR 2024 @ VLADA"
+website: https://pku-epic.github.io/Open6DOR
+---
+We present Open6DOR, a challenging and comprehensive benchmark for open-instruction 6-DoF object rearrangement tasks. Following this, we propose a zero-shot and robust method, Open6DORGPT, which proves effective in demanding simulation environments and real-world scenarios.

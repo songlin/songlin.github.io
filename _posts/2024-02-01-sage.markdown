@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "SAGE🌿: Bridging Semantic and Actionable Parts for Generalizable Manipulation of Articulated Objects"
+date:   2024-02-01 22:21:59 +00:00
+image: /images/sage.png
+categories: research
+author: "Songlin Wei"
+authors: "Haoran Geng*, <strong>Songlin Wei*</strong>, Congyue Deng, Bokui Shen, He Wang†, Leonidas Guibas†"
+venue: "RSS"
+arxiv: https://arxiv.org/abs/2312.01307
+website: https://geometry.stanford.edu/projects/sage/
+---
+We present SAGE🌿, a framework bridging the understanding of semantic and actionable parts for generalizable manipulation of articulated objects.

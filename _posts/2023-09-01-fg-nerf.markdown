@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "FG-NeRF: Flow-GAN based Probabilistic Neural Radiance Field for Independence-Assumption-Free Uncertainty Estimation"
+date:   2023-09-01 22:21:59 +00:00
+image: /images/fg-nerf.png
+categories: research
+author: "Songlin Wei"
+authors: "<strong>Songlin Wei*</strong>, Jiazhao Zhang*, Yang Wang, Fanbo Xiang, Hao Su, He Wang"
+venue: "Arxiv"
+arxiv: https://arxiv.org/abs/2309.16364
+---
+We propose an independence-assumption-free probabilistic neural radiance field based on Flow-GAN. By combining the generative capability of adversarial learning and the powerful expressivity of normalizing flow, our method explicitly models the density-radiance distribution of the whole scene.

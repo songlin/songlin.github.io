@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "D3RoMa: Disparity Diffusion-based Depth Sensing for Material-Agnostic Robotic Manipulation"
+date:   2024-05-02 22:21:59 +00:00
+image: /images/d3roma.png
+categories: research
+author: "Songlin Wei"
+authors: "<strong>Songlin Wei</strong>, Haoran Geng, Jiayi Chen, Congyue Deng, Wenbo Cui, Chengyang Zhao, Xiaomeng Fang, Leonidas Guibas, He Wang†"
+venue: "Under Review"
+---
+We propose D3RoMa, a diffusion model-based depth estimation framework on stereo image pairs for robotic manipulation.
