@@ -6,7 +6,7 @@ image: /images/open6dor.jpg
 categories: research
 author: "Songlin Wei"
 authors: "Yufei Ding*, Haoran Geng*, Chaoyi Xu, Xiaomeng Fang, Jiazhao Zhang, <strong>Songlin Wei</strong>, Qiyu Dai, Zhizheng Zhang, He Wang†"
-venue: "IROS2024"
+venue: "IROS"
 website: https://pku-epic.github.io/Open6DOR
 ---
 We present Open6DOR, a challenging and comprehensive benchmark for open-instruction 6-DoF object rearrangement tasks. Following this, we propose a zero-shot and robust method, Open6DORGPT, which proves effective in demanding simulation environments and real-world scenarios.
