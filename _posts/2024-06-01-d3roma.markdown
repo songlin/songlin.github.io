@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "D3RoMa: Disparity Diffusion-based Depth Sensing for Material-Agnostic Robotic Manipulation"
+title:  "<Anonymous>"
 date:   2024-05-02 22:21:59 +00:00
 image: /images/d3roma.png
 categories: research
