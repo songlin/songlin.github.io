@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Uni-NaVid: A Video-based Vision-Language-Action Model for Unifying Embodied Navigation Tasks"
+date:   2024-12-02 22:21:59 +00:00
+image: /images/uni_navid.gif
+categories: research
+author: "Songlin Wei"
+authors: "Jiazhao Zhang, Kunyu Wang ,Shaoan Wang ,Minghan Li ,Haoran Liu, <strong>Songlin Wei<strong/>, Zhongyuan Wang ,Zhizheng Zhang† ,He Wang†"
+venue: "Arxiv Preprint"
+---
+We present Uni-NaVid, the first video-based vision-language-action (VLA) model designed to unify diverse embodied navigation tasks and enable seamless navigation for mixed long-horizon tasks in unseen real-world environments.
