@@ -7,6 +7,7 @@ categories: research
 author: "Songlin Wei"
 authors: "Yang You, Bokui Shen, Congyue Deng, Haoran Geng, <strong>Songlin Wei</strong>, He Wang, Leonidas Guibas†"
 venue: "Arxiv"
+arxiv: https://arxiv.org/abs/2311.02787
 ---
 In this work, we introduce a demonstration-free hierarchical planning approach capable of tackling intricate long-horizon tasks without necessitating any training
 
