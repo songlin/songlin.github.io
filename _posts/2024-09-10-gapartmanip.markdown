@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RoboHanger: Learning Generalizable Robotic Hanger Insertion for Diverse Garments"
+title:  "GAPartManip: A Large-scale Part-centric Dataset for Material-Agnostic Articulated Object Manipulation"
 date:   2024-09-10 22:21:59 +00:00
 image: /images/gapartmanip.png
 categories: research
