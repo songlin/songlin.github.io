@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "GraspVLA: a Grasping Foundation Model Pre-trained on Billion-scale Synthetic Action Data "
+date:   2025-05-01 17:21:59 +00:00
+image: /images/graspvla.gif
+categories: research
+author: "Songlin Wei"
+authors: "Shengliang Deng*, Mi Yan*, <b>Songlin Wei</b>, Haixin Ma, Yuxin Yang, Jiayi Chen, Zhiqi Zhang, Taoyu Yang, Xuheng Zhang, Heming Cui, Zhizheng Zhang, He Wang†"
+venue: "Arxiv Preprint"
+website: https://pku-epic.github.io/GraspVLA-web/
+arxiv: https://arxiv.org/pdf/2505.03233
+---
+We present GraspVLA, a VLA model pretrained on large-scale synthetic action data as a foundational model for grasping tasks.

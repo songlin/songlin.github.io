@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Diffusion Knows Transparency: Repurposing Video Diffusion for Transparent Object Depth and Normal Estimation"
+date:   2025-12-01 17:21:59 +00:00
+image: images/dkt-teaser.gif
+categories: research
+author: "Songlin Wei"
+authors: "Shaocong Xu, <b>Songlin Wei</b>, Qizhe Wei, Zheng Geng, Hong Li, Licheng Shen, Qianpu Sun, Shu Han, Bin Ma, Bohan Li, Chongjie Ye, Yuhang Zheng, Nan Wang, Saining Zhang, and Hao Zhao†"
+venue: "Arxiv Preprint"
+website: https://bigcileng.github.io/bilateral-driving/
+arxiv: https://arxiv.org/abs/2512.23705
+---
+"Diffusion knows transparency." Generative video priors can be repurposed, efficiently and label-free, into robust, temporally coherent perception for challenging real-world manipulation.

@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation"
+date:   2026-03-12 17:21:59 +00:00
+image: /images/psi0.gif
+categories: research
+author: "Songlin Wei"
+authors: "<b>Songlin Wei*</b>, Hongyi Jing*, Boqian Li*, Zhenyu Zhao*, Jiageng Mao, Zhenhao Ni, Sicheng He, Jie Liu, Xiawei Liu, Kaidi Kang, Sheng Zang, Marco Pavone, Di Huang, Yue Wang†"
+venue: "Arxiv Preprint"
+website: https://psi-lab.ai/Psi0
+arxiv: https://arxiv.org/abs/2603.12263
+---
+Ψ0 is an open vision-language-action (VLA) model for dexterous humanoid loco-manipulation.
