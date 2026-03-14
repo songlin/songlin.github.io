@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "ICLR: In-Context Imitation Learning with Visual Reasoning"
+date:   2026-03-01 17:21:59 +00:00
+image: /images/psi0.gif
+categories: research
+author: "Songlin Wei"
+authors: "Toan Nguyen, Weiduo Yuan, <b>Songlin Wei</b>, Hui Li, Daniel Seita†, Yue Wang†"
+venue: "Arxiv Preprint"
+website: https://toannguyen1904.github.io/ICLR/
+arxiv: https://arxiv.org/abs/2603.07530
+---
+We present In-Context Imitation Learning with Visual Reasoning (ICLR), a framework that augments demonstration prompts with structured visual reasoning traces representing anticipated future robot trajectories in image space
