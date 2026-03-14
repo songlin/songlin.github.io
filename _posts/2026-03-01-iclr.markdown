@@ -2,7 +2,7 @@
 layout: post
 title:  "ICLR: In-Context Imitation Learning with Visual Reasoning"
 date:   2026-03-01 17:21:59 +00:00
-image: /images/psi0.gif
+image: /images/iclr.gif
 categories: research
 author: "Songlin Wei"
 authors: "Toan Nguyen, Weiduo Yuan, <b>Songlin Wei</b>, Hui Li, Daniel Seita†, Yue Wang†"
