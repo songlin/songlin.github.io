@@ -8,6 +8,9 @@ author: "Songlin Wei"
 authors: "<b>Songlin Wei*</b>, Hongyi Jing*, Boqian Li*, Zhenyu Zhao*, Jiageng Mao, Zhenhao Ni, Sicheng He, Jie Liu, Xiawei Liu, Kaidi Kang, Sheng Zang, Marco Pavone, Di Huang, Yue Wang†"
 venue: "Arxiv Preprint"
 website: https://psi-lab.ai/Psi0
-arxiv: https://arxiv.org/abs/2603.12263 <a class="github-button" href="https://github.com/physical-superintelligence-lab/Psi0" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Star physical-superintelligence-lab/Psi0 on GitHub">Star</a>
+arxiv: https://arxiv.org/abs/2603.12263 
 ---
 Ψ0 is an open vision-language-action (VLA) model for dexterous humanoid loco-manipulation.
+
+<a class="github-button" href="https://github.com/physical-superintelligence-lab/Psi0" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Star physical-superintelligence-lab/Psi0 on GitHub">Star</a>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
