@@ -127,6 +127,9 @@
               {% if post.youtube %}
               <a href="{{post.youtube}}">youtube</a> /
               {% endif %}
+              {% if post.github %}
+              <a class="github-button" href="{{post.github}}" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Star on GitHub">Star</a>
+              {% endif %}
               <p></p>
               {{ post.excerpt }}
             </td>
