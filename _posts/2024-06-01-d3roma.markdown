@@ -9,5 +9,6 @@ authors: "<strong>Songlin Wei</strong>, Haoran Geng, Jiayi Chen, Congyue Deng, W
 venue: "CoRL 2024, Wild3D@ECCV 2024"
 website: https://pku-epic.github.io/D3RoMa/
 arxiv: https://arxiv.org/abs/2409.14365
+github: https://github.com/songlin/d3roma
 ---
 We propose a diffusion model-based depth estimation framework on stereo image pairs for robotic manipulation.
