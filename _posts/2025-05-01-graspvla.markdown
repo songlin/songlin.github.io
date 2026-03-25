@@ -9,5 +9,6 @@ authors: "Shengliang Deng*, Mi Yan*, <b>Songlin Wei</b>, Haixin Ma, Yuxin Yang, 
 venue: "Arxiv Preprint"
 website: https://pku-epic.github.io/GraspVLA-web/
 arxiv: https://arxiv.org/pdf/2505.03233
+github: https://github.com/PKU-EPIC/GraspVLA
 ---
 We present GraspVLA, a VLA model pretrained on large-scale synthetic action data as a foundational model for grasping tasks.

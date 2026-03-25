@@ -6,6 +6,8 @@ image: /images/uni_navid.gif
 categories: research
 author: "Songlin Wei"
 authors: "Jiazhao Zhang, Kunyu Wang ,Shaoan Wang ,Minghan Li ,Haoran Liu, <strong>Songlin Wei</strong>, Zhongyuan Wang ,Zhizheng Zhang† ,He Wang†"
-venue: "Arxiv Preprint"
+venue: "RSS25"
+website: https://pku-epic.github.io/Uni-NaVid/
+github: https://github.com/jzhzhang/Uni-NaVid
 ---
 We present Uni-NaVid, the first video-based vision-language-action (VLA) model designed to unify diverse embodied navigation tasks and enable seamless navigation for mixed long-horizon tasks in unseen real-world environments.
