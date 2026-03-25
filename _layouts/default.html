@@ -94,7 +94,7 @@
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'research' %}
-          <tr>
+          <tr {% if post.github %}style="background-color:#fff3e0;"{% endif %}>
             <td style="padding:2.5%;width:45%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>

@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find /Users/songlin/Projects/songlin.github.io/_includes -type f -name *.html)"
+      "Bash(find /Users/songlin/Projects/songlin.github.io/_includes -type f -name *.html)",
+      "Bash(grep:*)"
     ]
   }
 }
