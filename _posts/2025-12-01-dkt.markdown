@@ -9,5 +9,6 @@ authors: "Shaocong Xu, <b>Songlin Wei</b>, Qizhe Wei, Zheng Geng, Hong Li, Liche
 venue: "Arxiv Preprint"
 website: https://bigcileng.github.io/bilateral-driving/
 arxiv: https://arxiv.org/abs/2512.23705
+github: https://github.com/Daniellli/DKT
 ---
 "Diffusion knows transparency." Generative video priors can be repurposed, efficiently and label-free, into robust, temporally coherent perception for challenging real-world manipulation.
