@@ -103,3 +103,84 @@ span.highlight {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
 //@import "svg-icons";
+
+/* ============================================================
+   Dark / Light Theme Toggle
+   ============================================================ */
+
+.highlighted-paper {
+  background-color: #fff3e0;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 1000;
+  background: none;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+#theme-toggle:hover {
+  border-color: #1772d0;
+  color: #1772d0;
+}
+
+/* Light mode: show moon (click to go dark), hide sun */
+.icon-sun { display: none; }
+.icon-moon { display: inline; }
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  body,
+  td, th, tr, p, a {
+    color: #d0d0d0;
+  }
+
+  body {
+    background-color: #1c1c1c;
+  }
+
+  a {
+    color: #6aacf0;
+  }
+
+  a:focus,
+  a:hover {
+    color: #f09228;
+  }
+
+  span.highlight {
+    background-color: #3a3a1a;
+  }
+
+  .highlighted-paper {
+    background-color: #2e2510;
+  }
+
+  #theme-toggle {
+    border-color: #666;
+    color: #ccc;
+  }
+
+  #theme-toggle:hover {
+    border-color: #6aacf0;
+    color: #6aacf0;
+  }
+
+  /* Dark mode: show sun (click to go light), hide moon */
+  .icon-sun { display: inline; }
+  .icon-moon { display: none; }
+}
