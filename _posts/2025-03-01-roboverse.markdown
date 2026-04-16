@@ -11,5 +11,4 @@ website: https://roboverseorg.github.io/
 arxiv: https://arxiv.org/abs/2504.18904
 github: https://github.com/RoboVerseOrg/RoboVerse
 ---
-Ψ0 is an open vision-language-action (VLA) model for dexterous humanoid loco-manipulation.
-
+RoboVerse is a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning.
