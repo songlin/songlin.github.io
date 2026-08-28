@@ -166,31 +166,16 @@
               <span class="award">{{post.award}}</span>
               <br>
               {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              {% if post.github %}
-              <span class="gh-star" data-repo="{{post.github}}"><a class="github-button" href="{{post.github}}" data-color-scheme="no-preference: light; light: light; dark: light;" data-show-count="true" aria-label="Star on GitHub" style="vertical-align: middle;">Star</a></span>
-              {% endif %}
-              <p></p>
+              <p class="paper-links">
+                {% if post.arxiv %}<span class="link-item"><a href="{{post.arxiv}}">arxiv</a></span>{% endif %}
+                {% if post.video %}<span class="link-item"><a href="{{post.video}}">video</a></span>{% endif %}
+                {% if post.code %}<span class="link-item"><a href="{{post.code}}">code</a></span>{% endif %}
+                {% if post.poster %}<span class="link-item"><a href="{{post.poster}}">poster</a></span>{% endif %}
+                {% if post.slides %}<span class="link-item"><a href="{{post.slides}}">slides</a></span>{% endif %}
+                {% if post.website %}<span class="link-item"><a href="{{post.website}}">website</a></span>{% endif %}
+                {% if post.youtube %}<span class="link-item"><a href="{{post.youtube}}">youtube</a></span>{% endif %}
+                {% if post.github %}<span class="link-item"><a class="gh-link" href="{{post.github}}">github<span class="gh-stars"></span></a></span>{% endif %}
+              </p>
               {{ post.excerpt }}
             </td>
           </tr>
@@ -302,36 +287,6 @@
         root.setAttribute('data-papers', on ? 'all' : 'highlighted');
         localStorage.setItem('onlyHighlighted', on ? 'false' : 'true');
         sync();
-        restar();
-      }
-      // buttons.js sizes each button from its rendered width, so any button
-      // inside a display:none row renders 0x0 and never recovers. Rebuild
-      // those anchors once their row is shown and re-run the library.
-      function restar() {
-        var pending = false;
-        var wraps = document.querySelectorAll('.gh-star');
-        for (var i = 0; i < wraps.length; i++) {
-          var w = wraps[i];
-          if (w.offsetParent === null) continue;          // still hidden
-          var child = w.firstElementChild;
-          if (child && child.offsetWidth > 0) continue;   // already rendered
-          w.innerHTML = '';
-          var a = document.createElement('a');
-          a.className = 'github-button';
-          a.href = w.getAttribute('data-repo');
-          a.setAttribute('data-color-scheme', 'no-preference: light; light: light; dark: light;');
-          a.setAttribute('data-show-count', 'true');
-          a.setAttribute('aria-label', 'Star on GitHub');
-          a.style.verticalAlign = 'middle';
-          a.appendChild(document.createTextNode('Star'));
-          w.appendChild(a);
-          pending = true;
-        }
-        if (pending) {
-          var s = document.createElement('script');
-          s.src = 'https://buttons.github.io/buttons.js';
-          document.body.appendChild(s);
-        }
       }
 
       sw.addEventListener('click', toggle);
@@ -339,7 +294,41 @@
       sync();
     })();
   </script>
-  <script defer src="https://buttons.github.io/buttons.js"></script>
+  <script>
+    // Star counts as plain text, so they sit on the same line as the other
+    // links. Cached in localStorage for six hours to stay well inside the
+    // unauthenticated GitHub API's per-IP rate limit.
+    (function() {
+      var TTL = 6 * 60 * 60 * 1000;
+      function fmt(n) {
+        if (n < 1000) return String(n);
+        return (n / 1000).toFixed(n < 10000 ? 1 : 0).replace(/\.0$/, '') + 'k';
+      }
+      var links = document.querySelectorAll('.gh-link');
+      for (var i = 0; i < links.length; i++) {
+        (function(a) {
+          var m = a.getAttribute('href').match(/github\.com\/([^\/]+\/[^\/#?]+)/);
+          if (!m) return;
+          var repo = m[1].replace(/\.git$/, '');
+          var out = a.querySelector('.gh-stars');
+          function show(n) { out.textContent = '\u2605' + fmt(n); }
+          var hit = null;
+          try { hit = JSON.parse(localStorage.getItem('ghstars:' + repo) || 'null'); } catch (e) {}
+          if (hit && Date.now() - hit.t < TTL) { show(hit.n); return; }
+          fetch('https://api.github.com/repos/' + repo)
+            .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
+            .then(function(d) {
+              show(d.stargazers_count);
+              try {
+                localStorage.setItem('ghstars:' + repo,
+                  JSON.stringify({ n: d.stargazers_count, t: Date.now() }));
+              } catch (e) {}
+            })
+            .catch(function() { if (hit) show(hit.n); });
+        })(links[i]);
+      }
+    })();
+  </script>
 </body>
 
 </html>

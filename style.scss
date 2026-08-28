@@ -213,6 +213,42 @@ html[data-papers="highlighted"] .switch-knob {
   font-variant-numeric: tabular-nums;
 }
 
+/* Paper links: the GitHub star button is a ~20px iframe, so a plain inline run
+   leaves it sitting on the text baseline. Flex-centre the row instead, and draw
+   the "/" separators with CSS so they stay outside the anchors. */
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+  margin: 6px 0 0 0;
+}
+
+.paper-links .link-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Star count rides along inside the code link, in a small pill so the number
+   stays readable without competing with the link text. */
+.gh-stars:not(:empty) {
+  margin-left: 5px;
+  padding: 1px 6px;
+  border: 1px solid #dcdcdc;
+  border-radius: 999px;
+  background-color: #f4f4f4;
+  color: #666;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.paper-links .link-item + .link-item::before {
+  content: "/";
+  margin-right: 8px;
+  color: #aaa;
+}
+
 /* Contact links: inline SVG (Simple Icons, CC0; Bootstrap Icons, MIT) that
    inherits link colour via currentColor, so it follows hover and theme. */
 .icon-link {
@@ -333,6 +369,16 @@ html[data-papers="highlighted"] .switch-knob {
     border-color: #2c5a51;
     background-color: #14302b;
     color: #4fc3ac;
+  }
+
+  .paper-links .link-item + .link-item::before {
+    color: #666;
+  }
+
+  .gh-stars:not(:empty) {
+    border-color: #3a3a3a;
+    background-color: #262626;
+    color: #999;
   }
 
   #theme-toggle {
