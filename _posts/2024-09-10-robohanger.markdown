@@ -6,7 +6,8 @@ image: /images/robohanger.gif
 categories: research
 author: "Songlin Wei"
 authors: "Yuxing Chen*, <strong>Songlin Wei*</strong>, Bowen Xiao, Jiangran Lyu, Jiayi Chen, Feng Zhu, He Wang†"
-venue: "arXiv"
+venue: "RA-L"
+venue_year: 2025
 arvix: https://arxiv.org/abs/2412.01083
 ---
 In this work, we address the problem of inserting a hanger into various unseen garments that are initially laid out flat on a table. 

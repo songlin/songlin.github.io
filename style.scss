@@ -108,8 +108,12 @@ span.highlight {
    Dark / Light Theme Toggle
    ============================================================ */
 
-.highlighted-paper {
-  background-color: #fff3e0;
+/* Highlighted papers: the tint sits on the cells rather than the row so the
+   bottom border can cut a page-coloured gap between them; back-to-back
+   highlights then read as separate entries instead of one long block. */
+.highlighted-paper > td {
+  background-color: #eeeeee;
+  border-bottom: 10px solid #fff;
 }
 
 .award {
@@ -345,8 +349,9 @@ html[data-papers="highlighted"] .switch-knob {
     background-color: #3a3a1a;
   }
 
-  .highlighted-paper {
-    background-color: #2e2510;
+  .highlighted-paper > td {
+    background-color: #2a2a2a;
+    border-bottom-color: #1c1c1c;
   }
 
   .award {

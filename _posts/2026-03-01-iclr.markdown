@@ -6,7 +6,8 @@ image: /images/iclr.webp
 categories: research
 author: "Songlin Wei"
 authors: "Toan Nguyen, Weiduo Yuan, <b>Songlin Wei</b>, Hui Li, Daniel Seita†, Yue Wang†"
-venue: "arXiv"
+venue: "IROS"
+venue_year: 2026
 website: https://toannguyen1904.github.io/ICLR/
 arxiv: https://arxiv.org/abs/2603.07530
 ---

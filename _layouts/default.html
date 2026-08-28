@@ -147,7 +147,7 @@
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'research' %}
-          <tr class="paper-row{% if post.highlight %} is-highlight{% endif %}{% if post.github %} highlighted-paper{% endif %}">
+          <tr class="paper-row{% if post.highlight %} is-highlight{% endif %}{% if post.github or post.featured %} highlighted-paper{% endif %}">
             <td style="padding:2.5%;width:45%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>

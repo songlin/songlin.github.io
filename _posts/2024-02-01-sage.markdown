@@ -7,6 +7,7 @@ categories: research
 author: "Songlin Wei"
 authors: "Haoran Geng*, <strong>Songlin Wei*</strong>, Congyue Deng, Bokui Shen, He Wang†, Leonidas Guibas†"
 highlight: true
+featured: true
 venue: "RSS"
 oral: true
 award: "🏆 Best Paper Award, Workshop on Semantic Reasoning and Goal Understanding in Robotics"
