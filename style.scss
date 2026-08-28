@@ -203,6 +203,13 @@ html[data-papers="highlighted"] .switch-knob {
   text-decoration: underline;
 }
 
+/* Author list: a step down from the bold 14px title so the two lines read
+   as heading + byline rather than one block. */
+.authors {
+  font-size: 13px;
+  color: #444;
+}
+
 .talk-list {
   margin: 0;
   padding-left: 20px;
@@ -329,4 +336,8 @@ html[data-theme="dark"] .switch-count {
 
 html[data-theme="dark"] .talk-date {
   color: #777;
+}
+
+html[data-theme="dark"] .authors {
+  color: #a8a8a8;
 }
