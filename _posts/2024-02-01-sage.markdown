@@ -7,7 +7,8 @@ categories: research
 author: "Songlin Wei"
 authors: "Haoran Geng*, <strong>Songlin Wei*</strong>, Congyue Deng, Bokui Shen, He Wang†, Leonidas Guibas†"
 highlight: true
-venue: 'RSS <span class="oral">(Oral Presentation)</span>'
+venue: "RSS"
+oral: true
 award: "🏆 Best Paper Award, Workshop on Semantic Reasoning and Goal Understanding in Robotics"
 arxiv: https://arxiv.org/abs/2312.01307
 website: https://geometry.stanford.edu/projects/sage/

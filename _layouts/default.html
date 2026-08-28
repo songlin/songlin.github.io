@@ -157,12 +157,15 @@
               <span class="authors">{{post.authors}}</span>
 
               <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              {% if post.venue_year %}{% assign venue_year = post.venue_year %}{% else %}{% assign venue_year = post.date | date: "%Y" %}{% endif %}
+              <p class="venue-line">
+                <span class="venue-badge{% if post.venue == 'arXiv' %} is-preprint{% endif %}">{{ post.venue }} {{ venue_year }}</span>
+                {% if post.oral %}<span class="venue-badge is-oral">Oral</span>{% endif %}
+              </p>
               {% if post.award %}
-              <br>
               <span class="award">{{post.award}}</span>
-              {% endif %}
               <br>
+              {% endif %}
               {% if post.arxiv %}
               <a href="{{post.arxiv}}">arxiv</a> /
               {% endif %}

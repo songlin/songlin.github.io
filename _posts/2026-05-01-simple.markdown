@@ -7,7 +7,7 @@ categories: research
 author: "Songlin Wei"
 authors: "<b>Songlin Wei*</b>, Zhenhao Ni*, Jie Liu*, Zhenyu Zhao*, Junjie Ye, Hongyi Jing, Junkai Xia, Xiawei Liu, Michael Leong, Liang Heng, Di Huang, and Yue Wang"
 highlight: true
-venue: "Arxiv Preprint"
+venue: "arXiv"
 website: https://psi-lab.ai/SIMPLE/
 arxiv: https://psi-lab.ai/SIMPLE/
 github: https://github.com/physical-superintelligence-lab/SIMPLE

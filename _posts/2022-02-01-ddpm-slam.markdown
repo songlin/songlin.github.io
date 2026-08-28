@@ -6,7 +6,7 @@ image: /images/ddpm-slam.png
 categories: research
 author: "Songlin Wei"
 authors: "<strong>Songlin Wei</strong>, Guodong Chen, Wenzheng Chi, Zhenhua Wang and Lining Sun"
-venue: "IEEE Transactions on Industrial Electronics"
+venue: "IEEE T-IE"
 arxiv: https://doi.org/10.1109/TIE.2022.3146553
 video: https://youtu.be/tpbAwQYhHTk
 ---

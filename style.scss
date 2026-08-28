@@ -117,9 +117,39 @@ span.highlight {
   font-weight: bold;
 }
 
-.oral {
+/* Venue badge: the venue is the first thing a reader scans for, so it gets a
+   pill of its own instead of a run of italics. Peer-reviewed venues take the
+   accent colour; preprints stay grey so the two are separable at a glance. */
+.venue-line {
+  margin: 6px 0 6px 0;
+  line-height: 1.9;
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  margin-right: 4px;
+  border: 1px solid #b9d4f2;
+  border-radius: 999px;
+  background-color: #e7f0fb;
+  color: #10559a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.venue-badge.is-preprint {
+  border-color: #dcdcdc;
+  background-color: #f2f2f2;
+  color: #666;
+  font-weight: 400;
+}
+
+.venue-badge.is-oral {
+  border-color: #a9ddd1;
+  background-color: #e3f5f0;
   color: #0f7b6c;
-  font-weight: bold;
 }
 
 /* Publication filter: hide non-highlighted rows while the toggle is on. */
@@ -287,7 +317,21 @@ html[data-papers="highlighted"] .switch-knob {
     color: #e8b64c;
   }
 
-  .oral {
+  .venue-badge {
+    border-color: #2f4d70;
+    background-color: #16283c;
+    color: #7fb6ee;
+  }
+
+  .venue-badge.is-preprint {
+    border-color: #3a3a3a;
+    background-color: #262626;
+    color: #999;
+  }
+
+  .venue-badge.is-oral {
+    border-color: #2c5a51;
+    background-color: #14302b;
     color: #4fc3ac;
   }
 

@@ -7,7 +7,9 @@ categories: research
 author: "Songlin Wei"
 authors: "Jiazhao Zhang, Kunyu Wang ,Shaoan Wang ,Minghan Li ,Haoran Liu, <strong>Songlin Wei</strong>, Zhongyuan Wang ,Zhizheng Zhang† ,He Wang†"
 highlight: true
-venue: 'RSS25 <span class="oral">(Oral Presentation)</span>'
+venue: "RSS"
+venue_year: 2025
+oral: true
 website: https://pku-epic.github.io/Uni-NaVid/
 github: https://github.com/jzhzhang/Uni-NaVid
 ---
