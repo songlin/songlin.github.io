@@ -2,7 +2,7 @@
 layout: post
 title:  "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation"
 date:   2026-05-01 17:21:59 +00:00
-image: /images/simple.gif
+image: /images/simple.webp
 categories: research
 author: "Songlin Wei"
 authors: "<b>Songlin Wei*</b>, Zhenhao Ni*, Jie Liu*, Zhenyu Zhao*, Junjie Ye, Hongyi Jing, Junkai Xia, Xiawei Liu, Michael Leong, Liang Heng, Di Huang, and Yue Wang"
