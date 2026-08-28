@@ -6,7 +6,8 @@ image: /images/uni_navid.gif
 categories: research
 author: "Songlin Wei"
 authors: "Jiazhao Zhang, Kunyu Wang ,Shaoan Wang ,Minghan Li ,Haoran Liu, <strong>Songlin Wei</strong>, Zhongyuan Wang ,Zhizheng Zhang† ,He Wang†"
-venue: "RSS25"
+highlight: true
+venue: 'RSS25 <span class="oral">(Oral Presentation)</span>'
 website: https://pku-epic.github.io/Uni-NaVid/
 github: https://github.com/jzhzhang/Uni-NaVid
 ---

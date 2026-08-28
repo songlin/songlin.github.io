@@ -54,3 +54,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Silence Dart Sass deprecation warnings emitted by the minima theme's own
+# stylesheets (we don't control that gem's source).
+sass:
+  quiet_deps: true

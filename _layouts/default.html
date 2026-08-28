@@ -36,6 +36,10 @@
       var saved = localStorage.getItem('theme');
       var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', theme);
+
+      // Publication filter: on by default, so only highlighted works show.
+      var onlyHighlighted = localStorage.getItem('onlyHighlighted') !== 'false';
+      document.documentElement.setAttribute('data-papers', onlyHighlighted ? 'highlighted' : 'all');
     })();
   </script>
 
@@ -69,7 +73,7 @@
               <h1>
                 Songlin Wei 魏松林
               </h1>
-              I'm a first-year PhD student at <a href="https://www.cs.usc.edu/">USC Computer Science Department</a> advised by Prof. <a href="https://yuewang.xyz/">Yue Wang.</a>
+              I'm a second-year PhD student at <a href="https://www.cs.usc.edu/">USC Computer Science Department</a> advised by Prof. <a href="https://yuewang.xyz/">Yue Wang.</a>
               <p>
                 Previously, my academic journey took me to <a href="https://cfcs.pku.edu.cn/english/">Peking University CFCS</a> where I had the privilege of working with Prof. <a href="https://hughw19.github.io/">He Wang</a>.
               </p>
@@ -82,17 +86,16 @@
               <p>
                 My current research interests include:
                 <ul>
-                  <li>Vision-Language-Action models for humanoids</li>
+                  <li>Foundational models for humanoids</li>
                   <li>Benchmarking-oriented simulation</li>
-                  <li>Humanoid motion tracking</li>
                 </ul>
               </p>
               <b>Please feel free to reach out if you are interested in collaboration.</b>
               <p style="text-align:center">
-                <a target="_blank" href="mailto: ggsonglin@gmail.com"> Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/songlin">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=jmtAxTgAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="images/wechat.jpg"> Wechat </a>
+                <a class="icon-link" target="_blank" href="mailto: ggsonglin@gmail.com"><svg class="link-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg><span>Email</span></a> &nbsp;/&nbsp;
+                <a class="icon-link" href="https://github.com/songlin"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>GitHub</span></a> &nbsp;/&nbsp;
+                <a class="icon-link" href="https://scholar.google.com/citations?user=jmtAxTgAAAAJ"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg><span>Google Scholar</span></a> &nbsp;/&nbsp;
+                <a class="icon-link" href="images/wechat.jpg"><svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg><span>Wechat</span></a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -100,6 +103,23 @@
             </td>
           </tr>
         </table>
+
+        {% if site.data.talks and site.data.talks.size > 0 %}
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Invited Talks</h2>
+              <ul class="talk-list">
+                {% for talk in site.data.talks %}
+                <li>
+                  <b>{% if talk.url %}<a href="{{ talk.url }}">{{ talk.host }}</a>{% else %}{{ talk.host }}{% endif %}</b> &mdash; {{ talk.title }}{% if talk.date %} <span class="talk-date">{{ talk.date }}</span>{% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        </table>
+        {% endif %}
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
@@ -110,6 +130,15 @@
                 Please reach out for collaboration if interested.
               </p> -->
               <i>* denotes equal contribution, † denotes corresponding author(s)</i>
+              <p class="switch-row">
+                <button id="highlight-switch" type="button" role="switch" aria-checked="true"
+                        aria-label="Show highlighted papers only"><span class="switch-knob"></span></button>
+                <span class="switch-text">Highlights only</span>
+                {% assign research = site.posts | where_exp: "p", "p.categories contains 'research'" %}
+                {% assign featured = research | where: "highlight", true %}
+                <span class="switch-count" data-highlighted="{{ featured.size }}"
+                      data-total="{{ research.size }}">({{ featured.size }}/{{ research.size }})</span>
+              </p>
             </td>
           </tr>
         </table>
@@ -118,7 +147,7 @@
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'research' %}
-          <tr {% if post.github %}class="highlighted-paper"{% endif %}>
+          <tr class="paper-row{% if post.highlight %} is-highlight{% endif %}{% if post.github %} highlighted-paper{% endif %}">
             <td style="padding:2.5%;width:45%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
@@ -129,6 +158,10 @@
 
               <br>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              {% if post.award %}
+              <br>
+              <span class="award">{{post.award}}</span>
+              {% endif %}
               <br>
               {% if post.arxiv %}
               <a href="{{post.arxiv}}">arxiv</a> /
@@ -152,7 +185,7 @@
               <a href="{{post.youtube}}">youtube</a> /
               {% endif %}
               {% if post.github %}
-              <a class="github-button" href="{{post.github}}" data-color-scheme="no-preference: light; light: light; dark: light;" data-show-count="true" aria-label="Star on GitHub" style="vertical-align: middle;">Star</a>
+              <span class="gh-star" data-repo="{{post.github}}"><a class="github-button" href="{{post.github}}" data-color-scheme="no-preference: light; light: light; dark: light;" data-show-count="true" aria-label="Star on GitHub" style="vertical-align: middle;">Star</a></span>
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -162,6 +195,7 @@
           {% endfor %}
           {% endfor %}
         </table>
+
         <br>
         <br>
         <br>
@@ -244,6 +278,60 @@
       </td>
     </tr>
   </table>
+  <script>
+    (function() {
+      var root = document.documentElement;
+      var sw = document.getElementById('highlight-switch');
+      var text = document.querySelector('.switch-text');
+      var count = document.querySelector('.switch-count');
+      function sync() {
+        var on = root.getAttribute('data-papers') === 'highlighted';
+        sw.setAttribute('aria-checked', on ? 'true' : 'false');
+        var total = count.getAttribute('data-total');
+        count.textContent = '(' + (on ? count.getAttribute('data-highlighted') : total) + '/' + total + ')';
+      }
+      function toggle() {
+        var on = root.getAttribute('data-papers') === 'highlighted';
+        root.setAttribute('data-papers', on ? 'all' : 'highlighted');
+        localStorage.setItem('onlyHighlighted', on ? 'false' : 'true');
+        sync();
+        restar();
+      }
+      // buttons.js sizes each button from its rendered width, so any button
+      // inside a display:none row renders 0x0 and never recovers. Rebuild
+      // those anchors once their row is shown and re-run the library.
+      function restar() {
+        var pending = false;
+        var wraps = document.querySelectorAll('.gh-star');
+        for (var i = 0; i < wraps.length; i++) {
+          var w = wraps[i];
+          if (w.offsetParent === null) continue;          // still hidden
+          var child = w.firstElementChild;
+          if (child && child.offsetWidth > 0) continue;   // already rendered
+          w.innerHTML = '';
+          var a = document.createElement('a');
+          a.className = 'github-button';
+          a.href = w.getAttribute('data-repo');
+          a.setAttribute('data-color-scheme', 'no-preference: light; light: light; dark: light;');
+          a.setAttribute('data-show-count', 'true');
+          a.setAttribute('aria-label', 'Star on GitHub');
+          a.style.verticalAlign = 'middle';
+          a.appendChild(document.createTextNode('Star'));
+          w.appendChild(a);
+          pending = true;
+        }
+        if (pending) {
+          var s = document.createElement('script');
+          s.src = 'https://buttons.github.io/buttons.js';
+          document.body.appendChild(s);
+        }
+      }
+
+      sw.addEventListener('click', toggle);
+      text.addEventListener('click', toggle);
+      sync();
+    })();
+  </script>
   <script defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 

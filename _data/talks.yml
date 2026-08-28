@@ -1,0 +1,13 @@
+# Invited talks, newest first. `title` is a short topic phrase, since each
+# talk renders on a single line. `date` and `url` are optional.
+- host: "Xiaomi Robotics"
+  date: "Mar 22, 2026"
+  title: "Open VLAs for humanoid loco-manipulation"
+
+- host: "UCI Collaborative Intelligence Systems Lab"
+  date: "Mar 19, 2026"
+  title: "Ψ₀ humanoid foundation model"
+
+- host: "TechBeat"
+  date: "Dec 21, 2024"
+  title: "Depth estimation for transparent objects"

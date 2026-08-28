@@ -13,7 +13,7 @@
 /* BASE RULES */
 /**************/
 a {
-  color: #1772d0;
+  color: #3f6b57;
   text-decoration: none;
 }
 
@@ -112,6 +112,112 @@ span.highlight {
   background-color: #fff3e0;
 }
 
+.award {
+  color: #b8860b;
+  font-weight: bold;
+}
+
+.oral {
+  color: #0f7b6c;
+  font-weight: bold;
+}
+
+/* Publication filter: hide non-highlighted rows while the toggle is on. */
+html[data-papers="highlighted"] .paper-row:not(.is-highlight) {
+  display: none;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0 0;
+}
+
+#highlight-switch {
+  position: relative;
+  box-sizing: border-box;
+  flex: none;
+  width: 38px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid #bbb;
+  border-radius: 11px;
+  background-color: #e2e2e2;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s;
+}
+
+html[data-papers="highlighted"] #highlight-switch {
+  background-color: #f09228;
+  border-color: #f09228;
+}
+
+html[data-papers="highlighted"] .switch-knob {
+  transform: translateX(16px);
+}
+
+.switch-text {
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.switch-count {
+  font-size: 14px;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Contact links: inline SVG (Simple Icons, CC0; Bootstrap Icons, MIT) that
+   inherits link colour via currentColor, so it follows hover and theme. */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.link-icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
+.icon-link:hover span {
+  text-decoration: underline;
+}
+
+.talk-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.talk-list li {
+  margin-bottom: 4px;
+}
+
+.talk-date {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+
 #theme-toggle {
   position: fixed;
   top: 14px;
@@ -134,8 +240,8 @@ span.highlight {
 }
 
 #theme-toggle:hover {
-  border-color: #1772d0;
-  color: #1772d0;
+  border-color: #3f6b57;
+  color: #3f6b57;
 }
 
 /* Light mode: show moon (click to go dark), hide sun */
@@ -154,7 +260,7 @@ span.highlight {
   }
 
   a {
-    color: #6aacf0;
+    color: #8fbca6;
   }
 
   a:focus,
@@ -170,17 +276,57 @@ span.highlight {
     background-color: #2e2510;
   }
 
+  .award {
+    color: #e8b64c;
+  }
+
+  .oral {
+    color: #4fc3ac;
+  }
+
   #theme-toggle {
     border-color: #666;
     color: #ccc;
   }
 
   #theme-toggle:hover {
-    border-color: #6aacf0;
-    color: #6aacf0;
+    border-color: #8fbca6;
+    color: #8fbca6;
   }
 
   /* Dark mode: show sun (click to go light), hide moon */
   .icon-sun { display: inline; }
   .icon-moon { display: none; }
+}
+
+/* Switch, dark theme. Both attributes live on <html>, so these are written
+   flat to keep the on-state more specific than the off-state. */
+html[data-theme="dark"] #highlight-switch {
+  background-color: #3a3a3a;
+  border-color: #666;
+}
+
+html[data-theme="dark"] .switch-knob {
+  background-color: #d0d0d0;
+}
+
+html[data-theme="dark"][data-papers="highlighted"] #highlight-switch {
+  background-color: #e8b64c;
+  border-color: #e8b64c;
+}
+
+html[data-theme="dark"][data-papers="highlighted"] .switch-knob {
+  background-color: #2e2510;
+}
+
+html[data-theme="dark"] .switch-text {
+  color: #aaa;
+}
+
+html[data-theme="dark"] .switch-count {
+  color: #777;
+}
+
+html[data-theme="dark"] .talk-date {
+  color: #777;
 }
