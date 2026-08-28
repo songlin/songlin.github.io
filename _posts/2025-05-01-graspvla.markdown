@@ -6,7 +6,8 @@ image: /images/graspvla.gif
 categories: research
 author: "Songlin Wei"
 authors: "Shengliang Deng*, Mi Yan*, <b>Songlin Wei</b>, Haixin Ma, Yuxin Yang, Jiayi Chen, Zhiqi Zhang, Taoyu Yang, Xuheng Zhang, Heming Cui, Zhizheng Zhang, He Wang†"
-venue: "Arxiv Preprint"
+highlight: true
+venue: "CoRL"
 website: https://pku-epic.github.io/GraspVLA-web/
 arxiv: https://arxiv.org/pdf/2505.03233
 github: https://github.com/PKU-EPIC/GraspVLA

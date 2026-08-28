@@ -13,7 +13,7 @@
 /* BASE RULES */
 /**************/
 a {
-  color: #3f6b57;
+  color: #1772d0;
   text-decoration: none;
 }
 
@@ -240,8 +240,8 @@ html[data-papers="highlighted"] .switch-knob {
 }
 
 #theme-toggle:hover {
-  border-color: #3f6b57;
-  color: #3f6b57;
+  border-color: #1772d0;
+  color: #1772d0;
 }
 
 /* Light mode: show moon (click to go dark), hide sun */
@@ -260,7 +260,7 @@ html[data-papers="highlighted"] .switch-knob {
   }
 
   a {
-    color: #8fbca6;
+    color: #6aacf0;
   }
 
   a:focus,
@@ -290,8 +290,8 @@ html[data-papers="highlighted"] .switch-knob {
   }
 
   #theme-toggle:hover {
-    border-color: #8fbca6;
-    color: #8fbca6;
+    border-color: #6aacf0;
+    color: #6aacf0;
   }
 
   /* Dark mode: show sun (click to go light), hide moon */
