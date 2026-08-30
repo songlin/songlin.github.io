@@ -321,6 +321,45 @@ html[data-papers="highlighted"] .switch-knob {
   color: #1772d0;
 }
 
+#to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 14px;
+  z-index: 1000;
+  background: none;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+#to-top:hover {
+  border-color: #1772d0;
+  color: #1772d0;
+}
+
+.papers-end {
+  padding: 2.5%;
+  text-align: center;
+  font-size: small;
+  font-style: italic;
+  color: #999;
+  letter-spacing: 0.05em;
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+}
+
 /* Light mode: show moon (click to go dark), hide sun */
 .icon-sun { display: none; }
 .icon-moon { display: inline; }
@@ -394,6 +433,24 @@ html[data-papers="highlighted"] .switch-knob {
   #theme-toggle:hover {
     border-color: #6aacf0;
     color: #6aacf0;
+  }
+
+  #to-top {
+    border-color: #666;
+    color: #ccc;
+  }
+
+  #to-top:hover {
+    border-color: #6aacf0;
+    color: #6aacf0;
+  }
+
+  .papers-end {
+    color: #777;
+  }
+
+  .site-footer {
+    border-top-color: #2a2a2a;
   }
 
   /* Dark mode: show sun (click to go light), hide moon */

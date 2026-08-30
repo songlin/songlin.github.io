@@ -50,6 +50,19 @@
     <span class="icon-moon">&#9790;</span>
     <span class="icon-sun">&#9728;</span>
   </button>
+  <button id="to-top" type="button" title="Back to top" aria-label="Back to top" hidden>&#8593;</button>
+  <script>
+    // Back-to-top: appears once the page is scrolled a screenful or so.
+    (function() {
+      var btn = document.getElementById('to-top');
+      function sync() { btn.hidden = window.scrollY < 400; }
+      btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      window.addEventListener('scroll', sync, { passive: true });
+      sync();
+    })();
+  </script>
   <script>
     document.getElementById('theme-toggle').addEventListener('click', function() {
       var current = document.documentElement.getAttribute('data-theme');
@@ -182,12 +195,11 @@
           {% endif %}
           {% endfor %}
           {% endfor %}
+          <tr>
+            <td class="papers-end" colspan="2">~ the end ~</td>
+          </tr>
         </table>
 
-        <br>
-        <br>
-        <br>
-        <br>
         <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -257,7 +269,7 @@
           <tr>
             <td style="padding:0px">
               <br>
-              <p style="text-align:center;font-size:small;color:#666;border-top:1px solid #eee;padding-top:16px;">
+              <p class="site-footer" style="text-align:center;font-size:small;color:#666;padding-top:16px;">
                 &copy; {{ site.time | date: "%Y" }} {{ site.name }} &nbsp;&middot;&nbsp;
                 Last updated {{ site.time | date: "%B %Y" }}
                 <br>
